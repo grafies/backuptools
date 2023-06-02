@@ -1,0 +1,15 @@
+# 源目录
+sourceDir:
+  path: D:/appdata/OneDriveData/OneDrive/Note
+
+# 目标目录
+targetDir:
+  path: E:/backuptools
+
+# 备份名称 backName+当前时间 ，【当前时间】为系统生成 例如：【笔记20221120.zip】
+# 在有备份文件时，修改备份名称会导致清除历史备份文件失败
+backName: 笔记
+
+# 保留历史文件份数，为0表示保留所有文件
+keepFiles: 5
+

@@ -1,0 +1,14 @@
+[backupTools]2023/06/02 06:12:24 main.go:13: &{{D:/appdata/OneDriveData/OneDrive/Note} {E:/backuptools} 笔记 0}
+
+[backupTools]2023/06/02 07:02:30 config.go:31: 文件读取失败： open ./config/backuptools.config: The system cannot find the file specified.
+[backupTools]2023/06/02 07:03:10 config.go:31: 文件读取失败： open ./config/backuptools.config: The system cannot find the file specified.
+[backupTools]2023/06/02 07:04:02 config.go:31: 文件读取失败： open ./config/backuptools.config: The system cannot find the file specified.
+[backupTools]2023/06/02 07:04:12 config.go:31: 文件读取失败： open ./config/backuptools.config: The system cannot find the file specified.
+[backupTools]2023/06/02 07:05:23 config.go:31: 文件读取失败： open ./config/backuptools.config: The system cannot find the file specified.
+[backupTools]2023/06/02 07:07:59 config.go:31: 文件读取失败： open ./config/backuptools.config: The system cannot find the file specified.
+[backupTools]2023/06/02 07:08:13 config.go:31: 文件读取失败： open asdfasdfasdfa: The system cannot find the file specified.
+[backupTools]2023/06/02 07:08:20 config.go:31: 文件读取失败： open asdfasdfasdfa: The system cannot find the file specified.
+[backupTools]2023/06/02 07:08:28 config.go:31: 文件读取失败： open ./config/backuptools.config: The system cannot find the file specified.
+[backupTools]2023/06/02 07:09:15 config.go:28: 文件读取失败： open ./config/backuptools.config: The system cannot find the file specified.
+[backupTools]2023/06/02 07:09:26 config.go:30: 文件读取失败： open ./config/backuptools.config: The system cannot find the file specified.
+[backupTools]2023/06/02 07:10:05 config.go:28: 文件读取失败： open ./config/backuptools.config: The system cannot find the file specified.
