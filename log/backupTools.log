@@ -1,14 +1,14 @@
-[backupTools]2023/06/02 06:12:24 main.go:13: &{{D:/appdata/OneDriveData/OneDrive/Note} {E:/backuptools} 笔记 0}
-
-[backupTools]2023/06/02 07:02:30 config.go:31: 文件读取失败： open ./config/backuptools.config: The system cannot find the file specified.
-[backupTools]2023/06/02 07:03:10 config.go:31: 文件读取失败： open ./config/backuptools.config: The system cannot find the file specified.
-[backupTools]2023/06/02 07:04:02 config.go:31: 文件读取失败： open ./config/backuptools.config: The system cannot find the file specified.
-[backupTools]2023/06/02 07:04:12 config.go:31: 文件读取失败： open ./config/backuptools.config: The system cannot find the file specified.
-[backupTools]2023/06/02 07:05:23 config.go:31: 文件读取失败： open ./config/backuptools.config: The system cannot find the file specified.
-[backupTools]2023/06/02 07:07:59 config.go:31: 文件读取失败： open ./config/backuptools.config: The system cannot find the file specified.
-[backupTools]2023/06/02 07:08:13 config.go:31: 文件读取失败： open asdfasdfasdfa: The system cannot find the file specified.
-[backupTools]2023/06/02 07:08:20 config.go:31: 文件读取失败： open asdfasdfasdfa: The system cannot find the file specified.
-[backupTools]2023/06/02 07:08:28 config.go:31: 文件读取失败： open ./config/backuptools.config: The system cannot find the file specified.
-[backupTools]2023/06/02 07:09:15 config.go:28: 文件读取失败： open ./config/backuptools.config: The system cannot find the file specified.
-[backupTools]2023/06/02 07:09:26 config.go:30: 文件读取失败： open ./config/backuptools.config: The system cannot find the file specified.
-[backupTools]2023/06/02 07:10:05 config.go:28: 文件读取失败： open ./config/backuptools.config: The system cannot find the file specified.
+[backupTools]2023/06/06 09:20:39 正在压缩{E:\Shared}文件到E:\/笔记20230606172039.zip
+[backupTools]2023/06/06 09:20:41 压缩成功！！！
+[backupTools]2023/06/06 09:20:41 正在清理历史文件
+[backupTools]2023/06/06 09:20:41 正在清理E:\/笔记20230606165405.zip
+[backupTools]2023/06/06 09:20:41 清理完成，备份结束！！！
+[backupTools]2023/06/06 09:21:54 正在压缩{E:\BaiduNetdiskDownload}文件到E:\/笔记20230606172154.zip
+[backupTools]2023/06/06 09:23:47 压缩成功！！！
+[backupTools]2023/06/06 09:23:47 正在清理历史文件
+[backupTools]2023/06/06 09:23:47 正在清理E:\/笔记20230606170840.zip
+[backupTools]2023/06/06 09:23:47 清理完成，备份结束！！！
+[backupTools]2023/06/06 09:26:09 正在压缩{E:\BaiduNetdiskDownload}文件到E:\/笔记20230606172609.zip
+[backupTools]2023/06/06 09:26:46 正在压缩{E:\BaiduNetdiskDownload}文件到E:\/笔记20230606172646.zip
+[backupTools]2023/06/06 09:27:40 正在压缩{E:\BaiduNetdiskDownload}文件到E:\/笔记20230606172740.zip
+[backupTools]2023/06/06 09:31:22 正在压缩{E:\ISO}文件到E:\/笔记20230606173122.zip

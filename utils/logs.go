@@ -32,5 +32,6 @@ func Log() {
 	}
 	log.SetOutput(logFile) // 将文件设置为log输出的文件
 	log.SetPrefix("[backupTools]")
-	log.SetFlags(log.LstdFlags | log.Lshortfile | log.LUTC)
+	log.SetFlags(log.LstdFlags | log.LUTC)
+	//log.SetFlags(log.LstdFlags | log.Lshortfile | log.LUTC)
 }

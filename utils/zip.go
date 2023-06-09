@@ -2,6 +2,7 @@ package utils
 
 import (
 	"archive/zip"
+	"github.com/schollz/progressbar/v3"
 	"io"
 	"log"
 	"os"
@@ -29,7 +30,7 @@ func ZipDir(SrcDir string, ZipFileName string) error {
 	*/
 
 	//遍历SrcDir下所有文件
-	filepath.Walk(SrcDir, func(path string, info os.FileInfo, err error) error {
+	_ = filepath.Walk(SrcDir, func(path string, info os.FileInfo, err error) error {
 
 		if !info.IsDir() { //判断是否为文件夹，当不为文件夹时，创建文件
 			fDest, err := w.Create(path[len(SrcDir)+1:]) //根据路径创建文件
@@ -45,7 +46,13 @@ func ZipDir(SrcDir string, ZipFileName string) error {
 			}
 			defer fSrc.Close() //延时关闭
 
-			_, err = io.Copy(fDest, fSrc) //把源文件fSrc拷贝写入到压缩包fDest
+			//显示进度条
+			bar := progressbar.DefaultBytes(
+				-1,
+				"正在压缩",
+			)
+			_, err = io.Copy(io.MultiWriter(fDest, bar), fSrc)
+			//_, err = io.Copy(fDest, fSrc) //把源文件fSrc拷贝写入到压缩包fDest
 			if err != nil {
 				log.Println("文件复制失败，", err)
 				return nil

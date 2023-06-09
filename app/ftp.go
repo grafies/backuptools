@@ -1,37 +1,45 @@
 package app
 
 import (
+	"backupTools/model"
+	"errors"
 	"fmt"
 	"github.com/jlaffaye/ftp"
-	"golang.org/x/text/encoding/simplifiedchinese"
 	"log"
 	"os"
 	"time"
 )
 
-func Ftp() {
-	//连接ftp
-	c, err := ftp.Dial("192.168.10.13:21", ftp.DialWithTimeout(5*time.Second))
+func Ftp(config model.Config, zipFileName string) error {
+	path := fmt.Sprintf("%v:%v", config.Ftp.Ip, config.Ftp.Port)
+
+	log.Print("正在连接ftp")
+	c, err := ftp.Dial(path, ftp.DialWithTimeout(5*time.Second))
 	if err != nil {
-		log.Panic("连接失败,", err)
+		return errors.New(fmt.Sprint("连接失败,", err))
 	}
 
-	//登录ftp
-	if err = c.Login("guest", ""); err != nil {
-		log.Panic("登录失败,", err)
+	log.Print("正在登录ftp")
+	if config.Ftp.Username == "" {
+		config.Ftp.Username = "guest"
+	}
+	if err = c.Login(config.Ftp.Username, config.Ftp.Password); err != nil {
+		return errors.New(fmt.Sprint("登录失败,", err))
 	}
 
-	//打开上传的文件
-	file, err := os.Open("E:/backuptools/笔记20230602134852.zip")
+	log.Print("正在处理上传文件")
+	zipFileNamePath := fmt.Sprintf("%v/%v", config.TargetDir.Path, zipFileName)
+	file, err := os.Open(zipFileNamePath) //打开文件
 	if err != nil {
-		log.Panic("打开文件失败,", err)
+		return errors.New(fmt.Sprint("打开文件失败,", err))
 	}
 	defer file.Close()
 
-	output, _ := simplifiedchinese.GB18030.NewDecoder().String("笔记20230602134852.zip")
-	fmt.Println(output)
-	if err = c.Stor(output, file); err != nil {
-		log.Panic("上传文件失败,", err)
+	log.Printf("正在上传文件...")
+	ftpPath := fmt.Sprintf("%v/%v", config.Ftp.Path, zipFileName)
+	if err = c.Stor(ftpPath, file); err != nil {
+		return errors.New(fmt.Sprint("上传文件失败,", err))
 	}
 
+	return nil
 }

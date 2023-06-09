@@ -1,10 +1,10 @@
 # 源目录
 sourceDir:
-  path: D:/appdata/OneDriveData/OneDrive/Note
+  path: E:\ISO
 
-# 目标目录
+# 本地目标目录
 targetDir:
-  path: E:/backuptools
+  path: E:\
 
 # 备份名称 backName+当前时间 ，【当前时间】为系统生成 例如：【笔记20221120.zip】
 # 在有备份文件时，修改备份名称会导致清除历史备份文件失败
@@ -12,4 +12,12 @@ backName: 笔记
 
 # 保留历史文件份数，为0表示保留所有文件
 keepFiles: 5
+
+ftp:
+  ftpSwitch: false     # ftp开关，设置ture为开启ftp，设置false为不上传
+  ip: 192.168.10.13   # ftp地址
+  port: 21            # ftp端口
+  path: /aaa          # 文件存放路径
+  username:
+  password:
 

@@ -63,6 +63,7 @@ func KeepFiles(distDirRoute string, backName string, compressedFormat string, Ke
 		delFile := len(delFileName) - KeepFileVal
 		for i, v := range delFileName {
 			if i < delFile {
+				log.Printf("正在清理%v/%v", distDirRoute, v)
 				err = os.Remove(fmt.Sprintf("%v/%v", distDirRoute, v))
 				if err != nil {
 					log.Println(err)

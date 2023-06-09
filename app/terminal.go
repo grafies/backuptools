@@ -16,13 +16,23 @@ func Terminal() {
 	config := model.ServerConfig(conf)
 
 	//生成目标路径
-	zipFileName := fmt.Sprintf("%v/%v%v%v",
-		config.TargetDir.Path, config.BackName, Times(), ".zip")
+	zipFileName := fmt.Sprintf("%v%v%v", config.BackName, Times(), ".zip")
+	zipFileNamePath := fmt.Sprintf("%v/%v",
+		config.TargetDir.Path, zipFileName)
 
-	log.Print("正在压缩文件到", zipFileName)
-	if err := utils.ZipDir(config.SourceDir.Path, zipFileName); err != nil {
+	log.Printf("正在压缩%v文件到%v", config.SourceDir, zipFileNamePath)
+	if err := utils.ZipDir(config.SourceDir.Path, zipFileNamePath); err != nil {
 		log.Print("压缩文件失败", err)
 		return
+	}
+	log.Print("压缩成功！！！")
+
+	if config.Ftp.FtpSwitch {
+		log.Printf("正在上传%v文件到ftp", zipFileNamePath)
+		if err := Ftp(*config, zipFileName); err != nil {
+			log.Print(err)
+		}
+		log.Print("ftp上传成功！！！")
 	}
 
 	log.Print("正在清理历史文件")
@@ -30,5 +40,6 @@ func Terminal() {
 		log.Print("清理文件失败", err)
 		return
 	}
+	log.Print("清理完成，备份结束！！！")
 
 }

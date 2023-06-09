@@ -11,6 +11,7 @@ type Config struct {
 	TargetDir TargetDir `yaml:"targetDir"` //目标目录
 	BackName  string    `yaml:"backName"`  //备份名称
 	KeepFiles int       `yaml:"keepFiles"` //备份保留数
+	Ftp       Ftp       `yaml:"ftp"`       //是否上传ftp
 }
 
 type SourceDir struct {
@@ -19,6 +20,15 @@ type SourceDir struct {
 
 type TargetDir struct {
 	Path string `yaml:"path"`
+}
+
+type Ftp struct {
+	FtpSwitch bool   `yaml:"ftpSwitch"`
+	Ip        string `yaml:"ip"`
+	Port      int    `yaml:"port"`
+	Path      string `yaml:"path"`
+	Username  string `yaml:"username"`
+	Password  string `yaml:"password"`
 }
 
 // ServerConfig 传入配置文件路径
