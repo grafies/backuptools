@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7adbd0c-d965-46c5-aa92-6e75d485b6c3" name="Changes" comment="" />
+    <list default="true" id="d7adbd0c-d965-46c5-aa92-6e75d485b6c3" name="Changes" comment="完成上传FTP">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/backupTools.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/backupTools.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/logs.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/logs.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/zip.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/zip.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +41,9 @@
     "WebServerToolWindowFactoryState": "false",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "C:/Users/A",
+    "last_opened_file_path": "D:/code/study/GO/project/backupTools",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
@@ -47,6 +55,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
+    <MESSAGE value="完成上传FTP" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成上传FTP" />
   </component>
   <component name="VgoProject">
     <environment>

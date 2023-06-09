@@ -51,13 +51,14 @@ func ZipDir(SrcDir string, ZipFileName string) error {
 				-1,
 				"正在压缩",
 			)
+
 			_, err = io.Copy(io.MultiWriter(fDest, bar), fSrc)
 			//_, err = io.Copy(fDest, fSrc) //把源文件fSrc拷贝写入到压缩包fDest
 			if err != nil {
 				log.Println("文件复制失败，", err)
 				return nil
 			}
-
+			_ = bar.Finish() //
 		}
 		return nil
 	})

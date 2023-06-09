@@ -1,14 +1,14 @@
 # 源目录
 sourceDir:
-  path: E:\ISO
+  path: E:\Shared
 
 # 本地目标目录
 targetDir:
-  path: E:\
+  path: E:/
 
 # 备份名称 backName+当前时间 ，【当前时间】为系统生成 例如：【笔记20221120.zip】
 # 在有备份文件时，修改备份名称会导致清除历史备份文件失败
-backName: 笔记
+backName: 笔111记
 
 # 保留历史文件份数，为0表示保留所有文件
 keepFiles: 5
