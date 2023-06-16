@@ -12,7 +12,6 @@ import (
 
 func Ftp(config model.Config, zipFileName string) error {
 	path := fmt.Sprintf("%v:%v", config.Ftp.Ip, config.Ftp.Port)
-
 	log.Print("正在连接ftp")
 	c, err := ftp.Dial(path, ftp.DialWithTimeout(5*time.Second))
 	if err != nil {
