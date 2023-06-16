@@ -4,7 +4,7 @@ sourceDir:
 
 # 本地目标目录
 targetDir:
-  path: E:/
+  path: \\192.168.10.15\backup\运维部
 
 # 备份名称 backName+当前时间 ，【当前时间】为系统生成 例如：【笔记20221120.zip】
 # 在有备份文件时，修改备份名称会导致清除历史备份文件失败
@@ -21,3 +21,9 @@ ftp:
   username:
   password:
 
+smb:
+  ftpSwitch: false     # Windows共享文件开关，设置ture为开启ftp，设置false为不上传
+  ip: 192.168.10.15    # Windows共享文件地址
+  path: /aaa           # 文件存放路径
+  username:
+  password:
