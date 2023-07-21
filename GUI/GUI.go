@@ -8,14 +8,14 @@ import (
 	"fyne.io/fyne/v2/driver/desktop"
 	"fyne.io/fyne/v2/layout"
 	"fyne.io/fyne/v2/widget"
-	theme "gitee.com/grafies/goTheme"
+	"gitee.com/grafies/goTypeface"
 	"log"
 )
 
 func GUI() {
-	a := app.New()                          //创建一个fyne应用
-	a.Settings().SetTheme(&theme.MyTheme{}) //设置并引入字体,让程序可以显示中文
-	w := a.NewWindow("backupTools")         //创建窗口名称
+	a := app.New()                                  //创建一个fyne应用
+	a.Settings().SetTheme(&goTypeface.GoTypeface{}) //设置并引入字体,让程序可以显示中文
+	w := a.NewWindow("backupTools")                 //创建窗口名称
 
 	MainShow(w) //调用窗口函数
 

@@ -12,6 +12,7 @@ require (
 
 require (
 	fyne.io/systray v1.10.1-0.20230602210930-b6a2d6ca2a7b // indirect
+	gitee.com/grafies/goTypeface v0.0.0-20230714071622-619834ba7fb7 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/fredbi/uri v0.1.0 // indirect
 	github.com/fsnotify/fsnotify v1.5.4 // indirect
