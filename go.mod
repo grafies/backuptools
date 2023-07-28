@@ -3,6 +3,7 @@ module backupTools
 go 1.20
 
 require (
+	fyne.io/fyne v1.4.3
 	fyne.io/fyne/v2 v2.3.5
 	gitee.com/grafies/goTypeface v0.0.0-20230714071622-619834ba7fb7
 	github.com/jlaffaye/ftp v0.2.0

@@ -3,7 +3,9 @@ package GUI
 import (
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
+	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/driver/desktop"
+	"fyne.io/fyne/v2/layout"
 	"fyne.io/fyne/v2/widget"
 	"gitee.com/grafies/goTypeface"
 )
@@ -32,7 +34,16 @@ func Minimize(w fyne.Window) {
 	compressedDirectory := widget.NewLabel("压缩目录：")
 	sourceAddress1 := widget.NewEntry() //输入的文本框
 
-	//w.SetContent(container.NewVBox())
+	// 第一行和第二行
+	head := container.NewCenter(title)
+
+	v1 := container.NewBorder(layout.NewSpacer(), layout.NewSpacer(), compressedDirectory, sourceAddress1)
+
+	labelLast := widget.NewLabel("backupTools")
+	position := container.NewVBox(head, v1, labelLast)
+	w.SetContent(position)
+
+	w.ShowAndRun()
 
 }
 
