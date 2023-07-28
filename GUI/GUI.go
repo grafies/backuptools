@@ -1,6 +1,9 @@
 package GUI
 
 import (
+	"fmt"
+	"log"
+
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
@@ -9,15 +12,14 @@ import (
 	"fyne.io/fyne/v2/layout"
 	"fyne.io/fyne/v2/widget"
 	"gitee.com/grafies/goTypeface"
-	"log"
 )
 
-func GUI() {
+func MainGui() {
 	a := app.New()                                  //创建一个fyne应用
 	a.Settings().SetTheme(&goTypeface.GoTypeface{}) //设置并引入字体,让程序可以显示中文
 	w := a.NewWindow("backupTools")                 //创建窗口名称
-
-	MainShow(w) //调用窗口函数
+	w.Resize(fyne.NewSize(800, 600))                //设置初始化窗口大小
+	w.CenterOnScreen()                              //居中显示
 
 	if desk, ok := a.(desktop.App); ok { //设置最小化托盘内容
 		m := fyne.NewMenu("backupTools",
@@ -30,30 +32,37 @@ func GUI() {
 		desk.SetSystemTrayMenu(m) //使用捕获的系统托盘菜单
 	}
 
-	w.Resize(fyne.NewSize(800, 600)) //设置初始化窗口大小
-	w.CenterOnScreen()               //居中显示
-
-	//w.SetContent(container.NewVBox())
-	w.ShowAndRun() //显示主页面
+	Minimize(w)
 
 }
 
-func MainShow(w fyne.Window) {
+func Minimize(w fyne.Window) {
+	MainShow2(w) //调用窗口函数
+
+	//w.SetContent(container.NewVBox())
+
+}
+
+func MainShow2(w fyne.Window) {
 	title := widget.NewLabel("备份工具")
 	compressedDirectory := widget.NewLabel("压缩目录：")
 	sourceAddress1 := widget.NewEntry() //输入的文本框
 
 	dia1 := widget.NewButton("浏览", func() { //回调函数：打开选择文件对话框
 		fd := dialog.NewFileOpen(func(closer fyne.URIReadCloser, err error) {
-			if err != nil {
+			//fmt.Println(closer.URI().Path())
+
+			if err != nil { //
 				dialog.ShowError(err, w)
 				return
 			}
-			if closer == nil {
-				log.Println("取消")
 
+			if closer == nil {
+				fmt.Println("取消")
+				return
 			}
 			sourceAddress1.SetText(closer.URI().Path())
+
 		}, w)
 
 		//fd.SetFilter(storage.NewExtensionFileFilter([]string{".txt"})) //打开的文件格式类型
@@ -61,7 +70,7 @@ func MainShow(w fyne.Window) {
 	})
 
 	text := widget.NewMultiLineEntry() //多行输入组件
-	//text.Disable()                     //禁用输入框，不能更改数据
+	text.Disable()                     //禁用输入框，不能更改数据
 
 	storageDirectory := widget.NewLabel("存放目录：")
 	sourceAddress2 := widget.NewEntry() //输入的文本框
@@ -105,4 +114,6 @@ func MainShow(w fyne.Window) {
 	position := container.NewVBox(head, v1, v2, v3Center, text, labelLast) //控制显示位置顺序
 
 	w.SetContent(position)
+	w.ShowAndRun() //显示主页面
+
 }

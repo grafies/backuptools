@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	fyne.io/fyne/v2 v2.3.5
-	gitee.com/grafies/goTheme v0.0.0-20230615092830-5fa151521532
+	gitee.com/grafies/goTypeface v0.0.0-20230714071622-619834ba7fb7
 	github.com/jlaffaye/ftp v0.2.0
 	github.com/schollz/progressbar/v3 v3.13.1
 	gopkg.in/yaml.v3 v3.0.1
@@ -12,7 +12,6 @@ require (
 
 require (
 	fyne.io/systray v1.10.1-0.20230602210930-b6a2d6ca2a7b // indirect
-	gitee.com/grafies/goTypeface v0.0.0-20230714071622-619834ba7fb7 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/fredbi/uri v0.1.0 // indirect
 	github.com/fsnotify/fsnotify v1.5.4 // indirect

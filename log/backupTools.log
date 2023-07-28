@@ -1,0 +1,11 @@
+[backupTools]2023/06/12 08:26:09 正在压缩{E:\Shared}文件到\\192.168.10.15\backup\运维部/笔111记20230612162609.zip
+[backupTools]2023/06/12 08:26:11 压缩成功！！！
+[backupTools]2023/06/12 08:26:11 正在清理历史文件
+[backupTools]2023/06/12 08:26:11 open \\192.168.10.15\backup\运维部: The system cannot find the file specified.
+[backupTools]2023/06/12 08:26:11 清理文件失败open \\192.168.10.15\backup\运维部: The system cannot find the file specified.
+[backupTools]2023/06/12 08:30:03 正在压缩{E:\Shared}文件到\\192.168.10.15\backup\运维部/笔111记20230612163003.zip
+[backupTools]2023/06/12 08:30:05 ====<nil>
+[backupTools]2023/06/12 08:30:05 压缩成功！！！
+[backupTools]2023/06/12 08:30:05 正在清理历史文件
+[backupTools]2023/06/12 08:30:05 open \\192.168.10.15\backup\运维部: The system cannot find the file specified.
+[backupTools]2023/06/12 08:30:05 清理文件失败open \\192.168.10.15\backup\运维部: The system cannot find the file specified.
